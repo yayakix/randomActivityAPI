@@ -1,51 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bored Ideas API</title>
-</head>
-<body>
-    <label for="cars">Choose a Type:</label>
+  </head>
+  <body>
+    <h1>Bored? Find an Activity!</h1>
+    <div id="body-container">
+      <div id="form-div">
+        <label for="activity">Choose a Type:</label>
+        <!-- <form> -->
+        <select name="type" id="type">
+          <option value="education">education</option>
+          <option value="diy">diy</option>
+          <option value="charity">charity</option>
+          <option value="cooking">cooking</option>
+          <option value="relaxation">relaxation</option>
+          <option value="music">music</option>
+          <option value="busywork">busywork</option>
+        </select>
 
-<select name="type" id="type">
-  <option value="education">education</option>
-  <option value="diy">diy</option>
-  <option value="charity">charity</option>
-  <option value="cooking">cooking</option>
-  <option value="relaxation">relaxation</option>
-  <option value="music">music</option>
-  <option value="busywork">busywork</option>
-</select>
+        <label for="people">How many people:</label>
+        <select name="participants" id="participants">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
 
-<label for="cars">How many participants:</label>
+        <label for="pricerange">Price</label>
+        <!-- 0 to 0.8 -->
+        <select name="price" id="price">
+          <option value="free">free</option>
+          <!-- 0 -->
+          <option value="low">low</option>
+          <!-- 0.1 to 0.3 -->
+          <option value="medium">medium</option>
+          <!-- 0.4 to  0.5-->
+          <option value="high">high</option>
+          <!-- 0.6 to 0.8 -->
+        </select>
+        <button id="randomActivity">Random!</button>
+        <button id="submitForm" type="submit">Click!</button>
+        <!-- </form> -->
+      </div>
 
-<select name="participants" id="participants">
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
-</select>
+      <div id="dataDisplay">
+        <h3 id="typeData"></h3>
+        <h3 id="activityData"></h3>
+        <h3 id="priceData"></h3>
+      </div>
+    </div>
 
-<label for="cars">Price</label>
-<!-- 0 to 0.8 -->
-
-<select name="cars" id="cars">
-  <option value="volvo">free</option>
-  <!-- 0 -->
-  <option value="saab">low</option>
-  <!-- 0.1 to 0.3 -->
-  <option value="mercedes">medium</option>
-  <!-- 0.4 to  0.5-->
-  <option value="audi">high</option>
-  <!-- 0.6 to 0.8 -->
-</select>
-
-<button type="submit">Get Activity!</button>
-    
-
+    <footer>Bored Api</footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
+  
 </html>
