@@ -1,5 +1,6 @@
-# Activity to do when bored
+# Activitys to do when bored
 
+## Technologies Used
 - HTML
 - CSS
 - Javascript
