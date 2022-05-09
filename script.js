@@ -2,13 +2,84 @@ let typeForm = $("#type");
 let peopleForm = $("#participants");
 let priceForm = $("#price");
 
+// function to generate type specific image
+function findImage(dataType) {
+  switch (dataType) {
+    case "music":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/1001850/pexels-photo-1001850.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "education":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/301920/pexels-photo-301920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "recreational":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/9621129/pexels-photo-9621129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "social":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/207896/pexels-photo-207896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "diy":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/3972016/pexels-photo-3972016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "charity":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/6590920/pexels-photo-6590920.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "relaxation":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/258330/pexels-photo-258330.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "busywork":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/4348401/pexels-photo-4348401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+    case "cooking":
+      $("img").attr(
+        "src",
+        "https://images.pexels.com/photos/2284166/pexels-photo-2284166.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+      );
+
+      break;
+
+    default:
+  }
+}
+
 $("#randomActivity").click(function () {
   let URLrandom = "http://www.boredapi.com/api/activity/";
   $.ajax({
     url: URLrandom,
   }).then(
     (data) => {
-      console.log(data.price);
+      findImage(`${data.type}`);
       $("#typeData").text(`Type: ${data.type}`);
       $("#activityData").text(`Activity: ${data.activity}`);
       //   format price
@@ -55,17 +126,15 @@ $("#submitForm").click(function () {
     price = lowArr[randomNum];
     priceVal = "high";
   }
-  console.log("price is on " + price);
 
   if (typeForm.val() === "any") {
     URL = `http://www.boredapi.com/api/activity?price=${price}&participants=${peopleForm.val()}`;
-    console.log("any ran")
-} else {
+    console.log("any ran");
+  } else {
     URL = `http://www.boredapi.com/api/activity?type=${typeForm.val()}&price=${price}&participants=${peopleForm.val()}`;
-  console.log("not any ran");
-}
+    console.log("not any ran");
+  }
 
-  console.log(peopleForm.val());
 
   $.ajax({
     url: URL,
@@ -75,13 +144,14 @@ $("#submitForm").click(function () {
         $("#errorbox").text(
           "there was an error, try different search parameters"
         );
-        $("#typeData").text(`Type: ${data.type}`);
-        $("#activityData").text(`Activity: ${data.activity}`);
-        $("#priceData").text(`Price: ${priceVal}`);
+        $("#typeData").text(`Type: `);
+        $("#activityData").text(`Activity: `);
+        $("#priceData").text(`Price: `);
       } else {
-           $("#errorbox").text(
-             ""
-           );
+        findImage(`${data.type}`);
+
+        $("#errorbox").text("");
+
         $("#typeData").text(`Type: ${data.type}`);
         $("#activityData").text(`Activity: ${data.activity}`);
         $("#priceData").text(`Price: ${priceVal}`);
