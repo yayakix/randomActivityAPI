@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koulen&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
     <title>Bored Ideas API</title>
   </head>
   <body>
@@ -13,6 +21,7 @@
         <label for="activity">Choose a Type:</label>
         <!-- <form> -->
         <select name="type" id="type">
+          <option value="any">Any</option>
           <option value="education">education</option>
           <option value="diy">diy</option>
           <option value="charity">charity</option>
@@ -21,7 +30,7 @@
           <option value="music">music</option>
           <option value="busywork">busywork</option>
         </select>
-
+        <br />
         <label for="people">How many people:</label>
         <select name="participants" id="participants">
           <option value="1">1</option>
@@ -30,7 +39,7 @@
           <option value="4">4</option>
           <option value="5">5</option>
         </select>
-
+        <br />
         <label for="pricerange">Price</label>
         <!-- 0 to 0.8 -->
         <select name="price" id="price">
@@ -43,12 +52,17 @@
           <option value="high">high</option>
           <!-- 0.6 to 0.8 -->
         </select>
-        <button id="randomActivity">Random!</button>
-        <button id="submitForm" type="submit">Click!</button>
+        <br />
+        <div class="button-div">
+          <button id="randomActivity">Random!</button>
+          <button id="submitForm" type="submit">Click!</button>
+        </div>
+
         <!-- </form> -->
       </div>
 
       <div id="dataDisplay">
+        <h3 id="errorbox"></h3>
         <h3 id="typeData"></h3>
         <h3 id="activityData"></h3>
         <h3 id="priceData"></h3>
@@ -59,5 +73,4 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
   </body>
-  
 </html>

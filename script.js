@@ -32,11 +32,12 @@ $("#randomActivity").click(function () {
 $("#submitForm").click(function () {
   let price = priceForm.val();
   let priceVal = "";
-  let randomNum = 0;
+  let randomNum = 0.0;
+  let URL = "";
   let lowArr = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8];
   console.log(price);
   if (price == "free") {
-    priceVal = free;
+    priceVal = "free";
     price = 0.0;
   } else if (price == "low") {
     //   generate random number to select a value from low prices array
@@ -45,17 +46,24 @@ $("#submitForm").click(function () {
     // from 0 to 2 index
     price = lowArr[randomNum];
   } else if (price == "medium") {
-      priceVal = "medium"
+    priceVal = "medium";
     //   3 to 4 index
     randomNum = Math.floor(Math.random() * 2) + 3;
     price = lowArr[randomNum];
   } else {
     randomNum = Math.floor(Math.random() * 3) + 5;
     price = lowArr[randomNum];
-    priceVal = "high"
+    priceVal = "high";
   }
+  console.log("price is on " + price);
 
-  let URL = `http://www.boredapi.com/api/activity?type=${typeForm.val()}&price=${price}&participants=${peopleForm.val()}`;
+  if (typeForm.val() === "any") {
+    URL = `http://www.boredapi.com/api/activity?price=${price}&participants=${peopleForm.val()}`;
+    console.log("any ran")
+} else {
+    URL = `http://www.boredapi.com/api/activity?type=${typeForm.val()}&price=${price}&participants=${peopleForm.val()}`;
+  console.log("not any ran");
+}
 
   console.log(peopleForm.val());
 
@@ -63,9 +71,21 @@ $("#submitForm").click(function () {
     url: URL,
   }).then(
     (data) => {
-      $("#typeData").text(`Type: ${data.type}`);
-      $("#activityData").text(`Activity: ${data.activity}`);
-      $("#priceData").text(`Price: ${priceVal}`);
+      if (data.type == undefined) {
+        $("#errorbox").text(
+          "there was an error, try different search parameters"
+        );
+        $("#typeData").text(`Type: ${data.type}`);
+        $("#activityData").text(`Activity: ${data.activity}`);
+        $("#priceData").text(`Price: ${priceVal}`);
+      } else {
+           $("#errorbox").text(
+             ""
+           );
+        $("#typeData").text(`Type: ${data.type}`);
+        $("#activityData").text(`Activity: ${data.activity}`);
+        $("#priceData").text(`Price: ${priceVal}`);
+      }
     },
     (error) => {
       console.log("bad request", error);

@@ -1,0 +1,49 @@
+body{
+    background-color: #827397;
+    font-family: 'Koulen', cursive;
+    padding: 12px;
+}
+
+#form-div{
+    background-color: #E9D5DA;
+    width: 50%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 12px;
+}
+
+#dataDisplay{
+    /* background-color: aqua; */
+}
+
+#body-container{
+    background-color: bisque;
+    display: flex;
+    height: 70vh;
+    border-radius: 15px;
+
+}
+footer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-top: 50px;
+}
+h1{
+    display: flex;
+    justify-content: center;
+    color: #E9D5DA;
+}
+
+button{
+    align-self: flex-end;
+    background-color: white;
+    border: #827397;
+    border-radius: 2px;
+    font-size: 15px;
+}
+select{
+    /* background-color: red; */
+    border-radius: 20px;
+    
+}
