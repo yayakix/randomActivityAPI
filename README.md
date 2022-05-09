@@ -1,4 +1,4 @@
-# Activitys to do when bored
+# Activity Generator
 
 ## Technologies Used
 - HTML
