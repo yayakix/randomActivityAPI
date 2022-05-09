@@ -1,19 +1,30 @@
 body{
-    background-color: #827397;
+    background-color: white;
     font-family: 'Koulen', cursive;
     padding: 12px;
 }
 
 #form-div{
-    background-color: #E9D5DA;
+    background-color: #A64B2A;
     width: 50%;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     padding: 12px;
+    color: white;
+   
+
 }
 
 #dataDisplay{
     /* background-color: aqua; */
+    color: #A64B2A;
+    display: flex;
+    /* justify-content: center; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    padding: 10px;
+    margin-left: 50px;
+    flex-direction: column;
 }
 
 #body-container{
@@ -21,7 +32,6 @@ body{
     display: flex;
     height: 70vh;
     border-radius: 15px;
-
 }
 footer{
     display: flex;
@@ -32,7 +42,7 @@ footer{
 h1{
     display: flex;
     justify-content: center;
-    color: #E9D5DA;
+    color: #8E3200;
 }
 
 button{
@@ -46,4 +56,8 @@ select{
     /* background-color: red; */
     border-radius: 20px;
     
+}
+
+img{
+    max-width: 350px;
 }
