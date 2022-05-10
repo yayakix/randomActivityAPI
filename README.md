@@ -5,6 +5,8 @@
 - CSS
 - Javascript
 - JQuery
+- BoredAPI
+- Pexels.com
 
 <!-- img goes here -->
 
