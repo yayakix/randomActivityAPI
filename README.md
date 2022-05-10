@@ -5,6 +5,8 @@
 - CSS
 - Javascript
 - JQuery
+- BoredAPI
+- Pexels.com
 
 <!-- img goes here -->
 
@@ -18,4 +20,6 @@ This app generates random activitys using the BoredAPI. You can ask for a random
 - More activities suggested by the api at a time
 - Better styling for user experience
 
-<img src="img/Screen Shot 2022-05-10 at 10.53.56 AM.png">
+
+<img alt="image of website" src="https://imgur.com/a/wFJe7gs">
+
