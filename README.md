@@ -7,6 +7,7 @@
 - JQuery
 - BoredAPI
 - Pexels.com
+- Colorhunt.co
 
 <!-- img goes here -->
 
@@ -21,5 +22,5 @@ This app generates random activitys using the BoredAPI. You can ask for a random
 - Better styling for user experience
 
 
-<img alt="image of website" src="https://imgur.com/a/wFJe7gs">
+<img alt="image of website" src="img/Screen Shot 2022-05-10 at 10.53.56 AM.png">
 
