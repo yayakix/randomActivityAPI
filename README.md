@@ -20,4 +20,6 @@ This app generates random activitys using the BoredAPI. You can ask for a random
 - More activities suggested by the api at a time
 - Better styling for user experience
 
+
 <img alt="image of website" src="https://imgur.com/a/wFJe7gs">
+
