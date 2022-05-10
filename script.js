@@ -73,6 +73,7 @@ function findImage(dataType) {
   }
 }
 
+// random button finds a random activity, no parameters required
 $("#randomActivity").click(function () {
   let URLrandom = "http://www.boredapi.com/api/activity/";
   $.ajax({
@@ -98,7 +99,7 @@ $("#randomActivity").click(function () {
     }
   );
 });
-// random button
+// non random search button, requires specific search parameters
 
 $("#submitForm").click(function () {
   let price = priceForm.val();
@@ -106,7 +107,7 @@ $("#submitForm").click(function () {
   let randomNum = 0.0;
   let URL = "";
   let lowArr = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8];
-  console.log(price);
+
   if (price == "free") {
     priceVal = "free";
     price = 0.0;
@@ -147,6 +148,10 @@ $("#submitForm").click(function () {
         $("#typeData").text(`Type: `);
         $("#activityData").text(`Activity: `);
         $("#priceData").text(`Price: `);
+        $("img").attr(
+          "src",
+          "https://images.pexels.com/photos/1888015/pexels-photo-1888015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+        );
       } else {
         findImage(`${data.type}`);
 
