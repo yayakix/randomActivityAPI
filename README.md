@@ -20,4 +20,4 @@ This app generates random activitys using the BoredAPI. You can ask for a random
 - More activities suggested by the api at a time
 - Better styling for user experience
 
-![image of website](/Users/iyanaslaptop/Desktop/generalAssembly/week2/project1boredideas/img/Screen Shot 2022-05-10 at 10.53.56 AM.png)
+![image of website](img/Screen Shot 2022-05-10 at 10.53.56 AM.png)
