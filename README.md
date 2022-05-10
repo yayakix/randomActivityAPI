@@ -19,3 +19,5 @@ This app generates random activitys using the BoredAPI. You can ask for a random
 - More specific search parameters
 - More activities suggested by the api at a time
 - Better styling for user experience
+
+![image of website](https://imgur.com/a/wFJe7gs)
