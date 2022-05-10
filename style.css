@@ -1,40 +1,40 @@
-*{
-    box-sizing: border-box;
-    margin: auto;
-    font-family: 'Koulen', cursive;
-    color: #470D21;
+* {
+  box-sizing: border-box;
+  margin: auto;
+  font-family: "Koulen", cursive;
+  color: #470d21;
 }
-img{
-    max-width: 350px;
-    max-height: 300px;
-    border: 5px solid white;
+img {
+  max-width: 350px;
+  max-height: 300px;
+  border: 5px solid white;
 }
-h1{
-    text-align: center;
-    color: #FF6363;
+h1 {
+  text-align: center;
+  color: #ff6363;
 }
-#body-container{
-    /* background-color: #F8B400; */
-    background: url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
-    background-repeat: no-repeat;
-background-size: cover;
-min-height: 500px;
+#body-container {
+  /* background-color: #F8B400; */
+  background: url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
 
-margin: 0 auto;
-text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
-#form-div{
-    /* background-color: aqua; */
-    padding-top: 50px;
+#form-div {
+  /* background-color: aqua; */
+  padding-top: 50px;
 }
- button{
-     margin-top: 30px;
-     margin-bottom: 20px;
-     background-color: white;
- }
-.content{background-color: white;
-    margin: 0 30% 20px 30%;
-    border-radius: 20px;
-    
- }
+button {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+.content {
+  background-color: white;
+  margin: 0 30% 20px 30%;
+  border-radius: 20px;
+}
