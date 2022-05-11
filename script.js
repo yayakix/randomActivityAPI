@@ -80,6 +80,7 @@ $("#randomActivity").click(function () {
     url: URLrandom,
   }).then(
     (data) => {
+      $("#errorbox").text("");
       findImage(`${data.type}`);
       $("#typeData").text(`Type: ${data.type}`);
       $("#activityData").text(`Activity: ${data.activity}`);
@@ -135,7 +136,6 @@ $("#submitForm").click(function () {
     URL = `https://www.boredapi.com/api/activity?type=${typeForm.val()}&price=${price}&participants=${peopleForm.val()}`;
     console.log("not any ran");
   }
-
 
   $.ajax({
     url: URL,
