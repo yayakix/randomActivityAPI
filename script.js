@@ -75,7 +75,7 @@ function findImage(dataType) {
 
 // random button finds a random activity, no parameters required
 $("#randomActivity").click(function () {
-  let URLrandom = "http://www.boredapi.com/api/activity/";
+  let URLrandom = "https://www.boredapi.com/api/activity/";
   $.ajax({
     url: URLrandom,
   }).then(
@@ -129,10 +129,10 @@ $("#submitForm").click(function () {
   }
 
   if (typeForm.val() === "any") {
-    URL = `http://www.boredapi.com/api/activity?price=${price}&participants=${peopleForm.val()}`;
+    URL = `https://www.boredapi.com/api/activity?price=${price}&participants=${peopleForm.val()}`;
     console.log("any ran");
   } else {
-    URL = `http://www.boredapi.com/api/activity?type=${typeForm.val()}&price=${price}&participants=${peopleForm.val()}`;
+    URL = `https://www.boredapi.com/api/activity?type=${typeForm.val()}&price=${price}&participants=${peopleForm.val()}`;
     console.log("not any ran");
   }
 
