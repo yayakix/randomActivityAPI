@@ -6,9 +6,12 @@
   background-color: #F7F7F7;
 }
 img {
-  max-width: 350px;
-  max-height: 300px;
+  max-width: 450px;
+  max-height: 450px;
   border: 5px solid #463333;
+  background-color: #463333;
+  /* padding: 0; */
+  /* margin: 0 auto; */
 }
 h1 {
   text-align: center;
@@ -79,4 +82,7 @@ li:hover {
 }
 nav {
   height: 60px;
+}
+a{
+  text-decoration: none;
 }
