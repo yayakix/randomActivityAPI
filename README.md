@@ -16,7 +16,7 @@
 This app generates random activitys using the BoredAPI. You can ask for a random activity or have it suggest one based on specific search parameters. 
 
 ## Link
-<a href="https://627bee1ca6f9ed0008703bf4--iridescent-peony-607767.netlify.app/" target='_blank'>Link to website</a>
+Here is the <a href="https://627bee1ca6f9ed0008703bf4--iridescent-peony-607767.netlify.app/" target='_blank'>link to website</a>
 
 
 ## Screenshot
