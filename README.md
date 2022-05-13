@@ -28,6 +28,7 @@ Here is the <a href="https://627bee1ca6f9ed0008703bf4--iridescent-peony-607767.n
 - More specific search parameters
 - More activities suggested by the api at a time
 - Better styling for user experience
+- Create a save ability for local storage
 
 
 
