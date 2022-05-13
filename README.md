@@ -7,6 +7,7 @@
 - JQuery
 - BoredAPI
 - Pexels.com
+- Google Fonts
 - Colorhunt.co
 
 <!-- img goes here -->
