@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   margin: auto;
-  font-family: "Koulen", cursive;
+  font-family: "Koulen", sans-serif;
   color: #463333;
   background-color: #F7F7F7;
 }
@@ -20,7 +20,7 @@ h1 {
   padding-top: 19px;
   margin: 0px 30px 0px 30px;
   border: 2px #ffbbcc;
-  font-family: "Macondo", cursive;
+  font-family: "Macondo", sans-serif;
   min-height: 80px;
 }
 #body-container {
